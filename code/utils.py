@@ -1,6 +1,14 @@
 import numpy as np
 import torch
-from torch.utils.serialization import load_lua
+
+# works for torch version: 0.4.1
+# explanation: https://github.com/pytorch/pytorch/issues/15307
+# from torch.utils.serialization import load_lua
+
+# port for torch version: 1.x
+# installed from: https://github.com/bshillingford/python-torchfile
+import torchfile
+
 import os
 import scipy.io as sio
 import cv2
